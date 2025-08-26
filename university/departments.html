@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Princeton University - Departments</title>
+  <style>
+    body { font-family: 'Georgia', serif; margin: 0; padding: 0; line-height: 1.6; }
+    header { background: #000; color: #e27633; padding: 15px; display: flex; align-items: center; }
+    header img { height: 50px; margin-right: 15px; }
+    nav { margin-left: auto; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+    
+    .content { background: #fff; padding: 40px; max-width: 1000px; margin: auto; text-align: center; }
+    .heading { padding: 10px; background: rgba(226, 118, 51, 0.15); margin: 20px 0; border-left: 5px solid #e27633; text-align: left; }
+    h1 { color: #db6a24; margin-bottom: 10px; }
+    h2 { color: #db6a24; margin-top: 10px; }
+    
+    ul { display: flex; justify-content: space-evenly; flex-wrap: wrap; list-style: none; padding: 0; margin-top: 30px; }
+    li { display: flex; flex-direction: column; align-items: center; margin: 15px; }
+    li img { border-radius: 8px; box-shadow: 0 3px 8px rgba(0,0,0,0.15); }
+    li a { text-decoration: none; color: #db6a24; font-weight: bold; }
+    li a:hover { color: #000; }
+    
+    footer { background: #000; color: #e27633; text-align: center; padding: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="P-LOGO.png" alt="Princeton University Logo">
+    <h1>Princeton University</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="departments.html">Departments</a>
+      <a href="admission.html">Admission</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="heading"><h1 align="center";>Departments</h1></div>
+    <p>Princeton University offers a wide range of academic programs across various departments.<br>
+    Click on a department below to learn more:</p>
+    
+    <ul>
+      <li>
+        <img width="270" src="cs.png" alt="cs">
+        <a href="cs.html"><h2>Computer Science</h2></a>
+      </li>
+      <li>
+        <img width="270" src="math.png" alt="math">
+        <a href="math.html"><h2>Mathematics</h2></a>
+      </li>
+      <li>
+        <img width="270" src="english.jpg" alt="english">
+        <a href="english.html"><h2>English</h2></a>
+      </li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Princeton University. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

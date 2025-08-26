@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Princeton University - Home</title>
+  <style>
+    body { margin: 0; font-family: 'Georgia', serif; background: #f9f9f9; color: #333; }
+    header { background: #000; color: #e27633; padding: 15px 20px; display: flex; align-items: center; }
+    header img { height: 55px; margin-right: 15px; }
+    nav { margin-left: auto; }
+    nav a { color: #fff; margin: 0 12px; text-decoration: none; font-weight: bold; transition: 0.3s; }
+    nav a:hover { color: #e27633; }
+
+    /* Hero Section */
+    .hero {
+      background: url('princ.png') center/cover no-repeat;
+      height: 70vh;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: #fff; text-align: center; position: relative;
+    }
+    .hero::after {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    .hero h1, .hero p { position: relative; z-index: 1; }
+    .hero h1 { font-size: 3rem; margin-bottom: 10px; color: #e27633; }
+    .hero p { font-size: 1.2rem; max-width: 700px; margin: auto; }
+
+    /* Sections */
+    .content { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+    .heading { text-align: center; margin-bottom: 20px; }
+    .heading h2 { font-size: 2rem; color: #e27633; margin: 0; }
+
+    /* Cards */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card {
+      background: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px; text-align: center; transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+    .card h3 { color: #e27633; margin: 10px 0; }
+
+    footer { background: #000; color: #e27633; text-align: center; padding: 15px; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="P-LOGO.png" alt="University Logo">
+    <h1>Princeton University</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="departments.html">Departments</a>
+      <a href="admission.html">Admission</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Princeton University</h1>
+    <p>Where tradition meets innovation — empowering leaders, thinkers, and innovators shaping the future.</p>
+  </section>
+
+  <!-- About Princeton -->
+  <div class="content">
+    <div class="heading"><h2>About Princeton</h2></div>
+    <p style="text-align: center; max-width: 850px; margin: auto;">
+      Founded in 1746, Princeton University is an Ivy League leader in research, education, and innovation. 
+      With world-class faculty, a low student-to-faculty ratio, and global impact, Princeton continues to rank among the top universities worldwide.
+    </p>
+  </div>
+
+  <!-- Rankings -->
+  <div class="content">
+    <div class="heading"><h2>Global Rankings & Recognition</h2></div>
+    <div class="cards">
+      <div class="card">
+        <img src="princeton1.png" alt="US Rankings">
+        <h3>#1 National University</h3>
+        <p>U.S. News & World Report 2025</p>
+      </div>
+      <div class="card">
+        <img src="princeton1.png" alt="QS Ranking">
+        <h3>#6 in the World</h3>
+        <p>QS World University Rankings 2025</p>
+      </div>
+      <div class="card">
+        <img src="princeton1.png" alt="THE Ranking">
+        <h3>#7 Globally</h3>
+        <p>Times Higher Education 2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Choose Princeton -->
+  <div class="content">
+    <div class="heading"><h2>Why Choose Princeton?</h2></div>
+    <div class="cards">
+      <div class="card">
+        <img src="princeton1.png" alt="Faculty">
+        <h3>World-Class Faculty</h3>
+        <p>Learn from Nobel laureates, Fields Medalists, and global leaders in their fields.</p>
+      </div>
+      <div class="card">
+        <img src="princeton1.png" alt="Students">
+        <h3>Student Experience</h3>
+        <p>Small classes, vibrant campus life, and global opportunities for growth.</p>
+      </div>
+      <div class="card">
+        <img src="princeton1.png" alt="Financial Aid">
+        <h3>Financial Aid</h3>
+        <p>Generous aid policy: 100% need-based, with no student loans required.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Princeton University. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
