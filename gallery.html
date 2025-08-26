@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Princeton University - Gallery</title>
+  <style>
+    body { font-family: 'Georgia', serif; margin: 0; padding: 0; line-height: 1.6; }
+    header { background: #000000; color: #e27633; padding: 15px; display: flex; align-items: center; }
+    header img { height: 50px; margin-right: 15px; }
+    nav { margin-left: auto; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    /* HERO SECTION */
+    .hero {
+      background: url('princ.png') center/cover no-repeat;
+      height: 40vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    .hero h1 { font-size: 3rem; position: relative; z-index: 1; color: #e27633; }
+    .hero p { font-size: 1.2rem; position: relative; z-index: 1; }
+
+    /* SLIDESHOW */
+    .slideshow-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 40px auto;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+    .mySlides {
+      display: none;
+      width: 100%;
+      height: 500px;
+    }
+    .mySlides img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    /* Fading animation */
+    .fade {
+      animation: fadeEffect 1.5s;
+    }
+    @keyframes fadeEffect {
+      from {opacity: 0.4}
+      to {opacity: 1}
+    }
+
+    /* Dots */
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .dot {
+      height: 12px; width: 12px;
+      margin: 0 4px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+      cursor: pointer;
+    }
+    .active {
+      background-color: #e27633;
+    }
+
+    footer { background: #070505; color: rgb(241, 131, 4); text-align: center; padding: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="P-LOGO.png" alt="University Logo">
+    <h1>Princeton University</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="departments.html">Departments</a>
+      <a href="admission.html">Admission</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About Us</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Princeton Gallery</h1>
+    <p>A glimpse into the beauty of our campus and community</p>
+  </section>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="mySlides fade"><img src="princ.png" alt="Princeton Campus"></div>
+    <div class="mySlides fade"><img src="campus.jpg" alt="Library"></div>
+    <div class="mySlides fade"><img src="lib.jpg" alt="Student Life"></div>
+    <div class="mySlides fade"><img src="hall.jpg" alt="Lecture Hall"></div>
+    <div class="mySlides fade"><img src="res.jpg" alt="Research Lab"></div>
+    <div class="mySlides fade"><img src="buii.png" alt="Graduation Ceremony"></div>
+  </div>
+
+  <!-- Dots -->
+  <div class="dots">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Princeton University. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+
+</body>
+</html>
